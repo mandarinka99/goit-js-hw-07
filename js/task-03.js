@@ -13,3 +13,21 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const imagesContainer = document.querySelector('#gallery');
+
+const makeImageGallery = images.map(image => {
+
+  const imageEl = document.createElement('img');
+  imageEl.setAttribute('src', image.url);
+  imageEl.setAttribute('alt', image.alt);
+  imageEl.width = 300;
+  
+  return imageEl;
+});
+
+imagesContainer.append(...makeImageGallery);
+imagesContainer.setAttribute("style", "display: flex; justify-content: space-between");
+
+
+

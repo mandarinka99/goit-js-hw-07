@@ -17,4 +17,3 @@ const print = arr.forEach(item =>
 Количество элементов: ${item.count}`));
 
 
-
